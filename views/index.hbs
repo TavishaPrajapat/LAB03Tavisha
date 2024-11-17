@@ -1,0 +1,53 @@
+<head>
+  <style>
+    /* Styling for the Transaction Tracker header */
+    h1 {
+      font-size: 3rem; /* Adjust the font size */
+      font-weight: bold; /* Make the header bold */
+      text-align: center; /* Center align the header */
+      color: #3B1E54; /* Set a deep color for the header */
+      margin-top: 50px; /* Add top margin for spacing */
+    }
+
+    /* Styling for the paragraph description */
+    p {
+      font-size: 1.2rem; /* Set the font size */
+      color: #333; /* Dark grey color for better readability */
+      text-align: center; /* Center align the paragraph */
+      max-width: 800px; /* Limit the width for readability */
+      margin: 20px auto; /* Center the paragraph and add margin for spacing */
+      line-height: 1.6; /* Increase line height for better readability */
+      padding: 0 15px; /* Add padding for responsive design */
+    }
+    /* Custom purple button styling */
+.btn-purple {
+  background-color: #6f42c1 !important; /* Purple background */
+  border-color: #6f42c1 !important; /* Purple border */
+}
+
+.btn-purple:hover {
+  background-color: #5a2d9b; /* Darker purple on hover */
+  border-color: #5a2d9b; /* Darker purple border on hover */
+}
+
+.text-white {
+  color: white !important; /* Ensure text is white */
+}
+  </style>
+</head>
+
+<body>
+  <h1>Transaction Tracker</h1>
+  <p>It is your personal finance management tool that helps you stay on top of all your financial transactions. Whether you're tracking income, expenses, or investments, this platform offers an easy-to-use interface to help you organize and monitor your transactions efficiently.</p>
+
+<!-- Button container -->
+<div class="button-container text-center">
+  {{#if user}}
+    <a class="btn btn-purple btn-lg text-white mx-3" href="#">{{user.username}}</a>
+    <a class="btn btn-purple btn-lg text-white mx-3" href="/logout">Logout</a>
+  {{else}}
+    <a class="btn btn-purple btn-lg text-white mx-3" href="/register">Register</a>
+    <a class="btn btn-purple btn-lg text-white mx-3" href="/login">Login</a>
+  {{/if}}
+</div>
+</body>

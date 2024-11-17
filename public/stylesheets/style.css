@@ -1,0 +1,134 @@
+/* Set background color of the body */
+body {
+  background-color: #D4BEE4;
+  margin: 0; /* Add space to make sure the navbar isn't hidden */
+  padding:0;
+}
+
+/* Jumbotron Header */
+.jumbotron {
+  background-color: #8967B3; /* Customize background color */
+  color: white;
+  top: 0;
+  left: 0;
+  padding: 40px 20px; /* Adjust padding for better content spacing */
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Center content vertically and horizontally */
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+}
+    
+
+/* Navbar */
+.navbar {
+  background-color: #3B1E54 !important; /* Force navbar color to dark purple */
+  position: relative;
+  z-index: 2; /* Ensure navbar stays above content */
+}
+
+
+.navbar-nav .nav-link {
+  font-size: 16px; /* Optional: Adjust font size */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Ensure the navbar brand and items are aligned */
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+a {
+  color: #EEEEEE; /* Change link color to #9B7EBD */
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #EEEEEE; /* Set label text color to the same purple */
+  font-weight: bold;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+input:focus, textarea:focus {
+  border-color: #9B7EBD; /* Change border color when input is focused */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  background-color: #9B7EBD; /* Purple button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7f5a94; /* Darken the button color on hover */
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.alert {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #D4BEE4; /* Light purple background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #EEEEEE; /* Set heading color to match the page theme */
+  font-size: 2em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}

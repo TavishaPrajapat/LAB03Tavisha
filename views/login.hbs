@@ -1,0 +1,156 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #D4BEE4; /* Light purple background */
+    }
+
+    h1 {
+      font-size: 3rem; /* Adjust the font size */
+      font-weight: bold; /* Make the header bold */
+      text-align: center; /* Center align the header */
+      color: #3B1E54; /* Set a deep color for the header */
+      margin-top: 50px; /* Add top margin for spacing */
+    }
+
+    /* Styling for the paragraph description */
+    p {
+      font-size: 1.2rem; /* Set the font size */
+      color: #333; /* Dark grey color for better readability */
+      text-align: center; /* Center align the paragraph */
+      max-width: 800px; /* Limit the width for readability */
+      margin: 20px auto; /* Center the paragraph and add margin for spacing */
+      line-height: 1.6; /* Increase line height for better readability */
+      padding: 0 15px; /* Add padding for responsive design */
+    }
+
+    .alert {
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .alert-danger {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .alert-info {
+      background-color: #d1ecf1;
+      color: #0c5460;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #3B1E54; /* Dark purple color for labels */
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button, .btn {
+      padding: 10px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .btn-info {
+      background-color: #3B1E54; /* Dark purple background */
+      color: white;
+    }
+
+    .btn-info:hover {
+      background-color: #5c2a75; /* Slightly lighter shade on hover */
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background-color: #c82333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+
+  {{!-- Show error message if credentials are incorrect --}}
+  {{#if messages}}
+    <div class="alert alert-danger">
+        Invalid credentials
+    </div>
+  {{else}}
+    <div class="alert alert-info">
+        Please enter your credentials
+    </div>
+  {{/if}}
+
+  <form method="post">
+    <fieldset class="form-group">
+      <label for="username" class="col-2 control-label">
+        Username: *
+      </label>
+      <input name="username" id="username" required />
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="password" class="col-2 control-label">
+        Password: *
+      </label>
+      <input name="password" id="password" type="password" required />
+    </fieldset>
+    <fieldset class="form-group">
+      <button class="btn btn-info">
+        Login
+      </button>
+      <a class="btn btn-danger" href="/google">Login with Google</a>
+      <hr />
+      Need an account?
+      <a href="/register" title="Register">
+        Register
+      </a>
+    </fieldset>
+  </form>
+</body>

@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="/public/stylesheets/style.css" type="text/css">
+
+<h1>{{title}}</h1>
+
+<form method="POST">
+  <fieldset>
+    <label for="name" class="col-2">
+      Category Name:
+    </label>
+    <input name="name" id="name" placeholder="Category Name (e.g. Transportation, Grocery)" required />
+  </fieldset>
+
+  <fieldset>
+    <label for="description" class="col-2">
+      Description:
+    </label>
+    <input name="description" id="description" placeholder="Enter Expense Category Description" required />
+  </fieldset>
+
+  <button class="btn btn-primary">
+    Save
+  </button>
+</form>
+
+<style>
+  /* General form styling */
+  form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Styling for each fieldset */
+  fieldset {
+    margin-bottom: 20px;
+    border: none;
+  }
+
+  /* Label styling */
+  label {
+    display: block;
+    font-weight: bold;
+    color: #3B1E54;  /* Deep purple */
+    margin-bottom: 8px;
+  }
+
+  /* Input field styling */
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  /* Button styling */
+  .btn-primary {
+    background-color: #3B1E54;  /* Purple background */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: center;
+    width: 100%; /* Ensures button is within form boundaries */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    margin-top: 20px; /* Space above the button */
+  }
+
+  /* Button hover effect */
+  .btn-primary:hover {
+    background-color: #5c2a75;  /* Lighter purple shade */
+  }
+</style>
